@@ -3,5 +3,27 @@
 
 	<body>
 		<h1>Hello from the frontend ah</h1>
+		<button onclick="" id="myBtn">Get Data</button>
+
+		<div id="demo"></div>
 	</body>
+
+	<script>
+		const element = document.getElementById('myBtn');
+		element.addEventListener('click', showData);
+
+		function showData() {
+            try {
+                fetch('http://localhost:8788/api/data')
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        document.getElementById('demo').innerHTML = data.data;
+                    })
+                    .catch(err => console.log(err));
+            } catch (e) {
+                console.log(e);
+            }
+		}
+	</script>
 </html>
