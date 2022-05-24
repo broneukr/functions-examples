@@ -6,9 +6,7 @@
     "dev": " npx parcel client/index.html",
     "start": "npx wrangler pages dev ./client --kv jokes"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+
   "devDependencies": {
     "parcel": "^2.2.1"
   },
